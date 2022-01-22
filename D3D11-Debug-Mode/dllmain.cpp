@@ -88,8 +88,8 @@ extern "C" {
 
 		// Add Debug Flag
 		UINT altredFlags = Flags;
-		Flags |= D3D11_CREATE_DEVICE_DEBUG;
-		Flags |= D3D11_CREATE_DEVICE_DEBUGGABLE;
+		altredFlags |= D3D11_CREATE_DEVICE_DEBUG;
+		altredFlags |= D3D11_CREATE_DEVICE_DEBUGGABLE;
 		return funOriginal(pAdapter, DriverType, Software, altredFlags, pFeatureLevels, FeatureLevels, SDKVersion, ppDevice, pFeatureLevel, ppImmediateContext);
 	}
 
